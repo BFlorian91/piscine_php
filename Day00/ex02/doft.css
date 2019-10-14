@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #3c4245;
+    background: #525659;
 }
 
 header {
@@ -127,7 +127,7 @@ header {
     position: absolute;
     bottom: 150px;
     left: 280px;
-    background-color: rgb(111, 228, 111);
+    background-color: #88FF89;
     border-radius: 15px;
     box-shadow: 20px 10px 10px;
     width: 600px;
@@ -160,4 +160,20 @@ header {
 	border-radius: 15px;
     background-color: #909090;
     box-shadow: 20px 10px 10px
+}
+
+.link_chair {
+    position: absolute;
+    width: 150px; 
+    height: 300px; 
+    bottom: 250px; 
+    right: 1400px;
+}
+
+.link_screen {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    bottom: 400px; 
+    right: 630px;
 }
