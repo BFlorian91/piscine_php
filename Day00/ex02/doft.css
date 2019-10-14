@@ -21,7 +21,8 @@ header {
 }
 
 #do42 {
-    height: 100%;
+    height: 85%;
+    margin-top: 15px;
     border-radius: 15px;
 }
 
@@ -135,6 +136,7 @@ header {
 }
 
 .tooltip_green p {
+    margin-top: 15px;
     margin-left: 20px;
     font-family: Arial, sans-serif;
     font-size: 20px;
@@ -142,7 +144,10 @@ header {
 
 .tooltip_green input {
     margin-left: 20px;
-    width: 450px;
+    width: 420px;
+    height: 20px;
+    border-width: 3px; 
+    border-style: inset;
 }
 
 #enter {
@@ -152,8 +157,20 @@ header {
     font-family: serif
 }
 
+#italic {
+    font-style: italic;
+}
+
 #special_shadow {
     text-shadow: red 2px 5px 4px;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    margin-left: 7px;
+    border-radius: 4px;
 }
 
 .shadow {
