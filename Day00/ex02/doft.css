@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #3c4245;
+}
+
+header {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#dayof {
+    width: 78%;
+    height: 200px;
+    background: #909090;
+    position: relative;
+;
+}
+
+#do42 {
+    height: 100%;
+    border-radius: 15px;
+}
+
+#loupe {
+   position: absolute;
+   height: 105%;
+   width: 20%;
+   right: 60px;
+   top: 15px;
+}
+
+#reload {
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    right: 30px;
+    top: 15px;
+}
+
+#close {
+    position: absolute;
+    right: 0;
+    height: 12%;
+    right: 30px;
+    top: 155px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 1000px;
+    width: 100%;
+}
+
+.left {
+    width: 8%;
+    height: 65%;
+    margin-left: 13%;
+    margin-right: -9%;
+    background: #909090;
+}
+.content_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+}
+
+.img_lsize {
+    margin-top: 15px;
+    width: 100px;
+}
+
+#eye {
+    border: red 6px solid;
+    border-radius: 8px;
+    margin-top: 15px;
+    height: 100px;
+}
+
+.center {
+    width: 55%;
+    height:83%;
+    background: #909090;
+}
+
+.center img {
+    margin: 15px;
+    width: 1380px; 
+    height: 800px;
+}
+
+.right {
+    width: 8%;
+    height: 65%;
+    margin-right: 13%;
+    margin-left: -9%;
+    background: #909090;
+}
+
+.content_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%; 
+}
+
+.img_rsize {
+    margin-top: 15px;
+    width: 50%
+}
+
+#brick {
+    background-image: url(resources/brick.jpg);
+    background-repeat: repeat;
+    margin-top: 5px;
+    width: 80%;
+    height: 100px;
+}
+
+.tooltip_green {
+    position: absolute;
+    bottom: 150px;
+    left: 280px;
+    background-color: rgb(111, 228, 111);
+    border-radius: 15px;
+    box-shadow: 20px 10px 10px;
+    width: 600px;
+    height: 230px;
+}
+
+.tooltip_green p {
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.tooltip_green input {
+    margin-left: 20px;
+    width: 450px;
+}
+
+#enter {
+    height: 20px;
+    width: 75px;
+    font-size: 37px;
+    font-family: serif
+}
+
+#special_shadow {
+    text-shadow: red 2px 5px 4px;
+}
+
+.shadow {
+	border-radius: 15px;
+    background-color: #909090;
+    box-shadow: 20px 10px 10px
+}
