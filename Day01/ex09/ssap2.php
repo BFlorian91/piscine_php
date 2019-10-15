@@ -1,11 +1,6 @@
 #!/usr/bin/php
 <?php
 
-    function ft_is_alpha($str)
-    {
-        return ($str >= 'a' && $str <= 'z' || $str >= 'A' && $str <= 'Z');
-    }
-
     function ft_ssap($argc, $argv)
     {
         if ($argc == 1)
@@ -39,15 +34,15 @@
     $num = [];
     $other = [];
     foreach ($array as $value) {
-        if (ft_is_alpha($value[0]))
+        if (ctype_alpha($value))
             array_push($alpha, $value);
-        else if (is_numeric($value[0]))
+        else if (is_numeric($value))
             array_push($num, $value);
         else
             array_push($other, $value);
     }
     $sort_array = [];
-    natcasesort($num);
+    sort($num, SORT_STRING);
     natcasesort($alpha);
     natcasesort($other);
     ft_display($num, $alpha, $other);
