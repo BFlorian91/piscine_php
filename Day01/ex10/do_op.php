@@ -2,7 +2,7 @@
 <?php
 
     if ($argc != 4)
-        die();
+        die("Incorrect Parameters" . PHP_EOL);
     $array = array_values(array_map("trim", $argv));
     unset($array[0]);
     switch ($array[2]) {

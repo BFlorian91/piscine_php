@@ -9,5 +9,7 @@
         array_push($array, $array[0]);
         unset($array[0]);
         $str = implode(" ", $array);
+        if (empty($str))
+            die();
         echo $str . PHP_EOL;
     }

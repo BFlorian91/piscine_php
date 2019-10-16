@@ -3,5 +3,5 @@
 
     include("ft_split.php");
 
-    print_r(ft_split(" Hello World AAA               OOPS "));
+    print_r(ft_split($argv[1]));
 ?>

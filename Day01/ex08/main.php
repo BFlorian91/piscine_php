@@ -1,9 +1,9 @@
 #!/usr/bin/php
 <?PHP
     include("ft_is_sort.php");
+//    include("lol.php");
     
-    $tab = array("ZZZZ", "SSSS", "DDDD", "C", "BB");
-    $tab[] = "AA";
+    $tab = array("AAA", "BB", "CCCCC", "D", "EEEE");
     if (ft_is_sort($tab))
         echo "Le tableau est trie\n";
     else
