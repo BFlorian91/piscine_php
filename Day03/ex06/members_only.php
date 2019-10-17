@@ -8,7 +8,7 @@
         die;
     }
     $data = file_get_contents('../img/42.png');
-    $img = 'data:image/png;base64;' . base64_encode($data);
+    $img = 'data:image/png;base64,' . base64_encode($data);
     if ($_SERVER['PHP_AUTH_USER'] == $user && $_SERVER['PHP_AUTH_PW'] == $pass) { ?>
     <html><body>
         Bonjour, Zaz<br/>
