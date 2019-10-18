@@ -1,8 +1,10 @@
 <?php
 
-    if (isset($_POST['login']) && isset($_POST['oldpw']) && isset($_POST['newpw'])) {
-        if (!$_POST['newpass'] && $_POST['submit'] != "OK")
+    if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw']) {
+        if (!$_POST['newpw'] || $_POST['submit'] != "OK") {
             echo("ERROR" . PHP_EOL);
+            return;
+        }
         
         $accounts = unserialize(file_get_contents("../private/passwd"));
         
@@ -19,7 +21,6 @@
             if ($user_exist) {
                 file_put_contents("../private/passwd", serialize($accounts));
                 echo("OK" . PHP_EOL);
-                header('Location: index.html');
             } else {
                 echo("ERROR" . PHP_EOL);
             }

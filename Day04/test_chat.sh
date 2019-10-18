@@ -9,9 +9,6 @@ curl -d login=user1 -d passwd=pass1 -d submit=OK 'localhost:8888/Day04/ex04/crea
 read
 curl -d login=user2 -d passwd=pass2 -d submit=OK 'localhost:8888/Day04/ex04/create.php'
 read
-echo -e "${GRN}\nVerification USER CREATION:\n${NRM}"
-cat private/passwd
-read
 echo -e "${GRN}\nlogin USER1\n${NRM}"
 curl -c user1.txt -d login=user1 -d passwd=pass1 -d submit=OK 'localhost:8888/Day04/ex04/login.php'
 read
