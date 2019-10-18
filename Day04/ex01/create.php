@@ -1,24 +1,32 @@
 <?php
 
-    if (isset($_POST["login"]) && isset($_POST["passwd"]) && isset($_POST["submit"])) {
-        if (!$_POST["passwd"] || $_POST["submit"] != "OK")
-            die("ERROR" . PHP_EOL);
-        $user["login"] = $_POST["login"];
-        $user["passwd"] = hash("Whirlpool", $_POST["passwd"]);
+    if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] == 'OK') {
+        
+        $user['login'] = $_POST['login'];
+        $user['passwd'] = hash('Whirlpool', $_POST['passwd']);
 
-        if (!file_exists("../private"))
-            mkdir("../private");
-        if (file_exists("../private/passwd")) {
-            $accounts[] = unserialize("../private/passwd");
-            foreach ($accounts as $account) {
-                if ($account["login"] == $user["login"])
-                    die("ERROR" . PHP_EOL);
+        if (!file_exists('../private')) {
+            mkdir('../private');
+        }
+        if (!file_exists('../private/passwd')) {
+            file_put_contents('../private/passwd', null);
+        }
+        $accounts= unserialize(file_get_contents('../private/passwd'));
+        if ($accounts) {
+            $exist = false;
+            foreach ($accounts as $key => $val) {
+                if ($val['login'] == $user['login']) {
+                    $exist = true;
+                }
             }
         }
-        $i = 0;
-        foreach ($accounts as $account)
-            $i++;
-        $accounts[$i] = $user;
-        file_put_contents("../private/passwd", serialize($accounts));
-        die("OK" . PHP_EOL);
+        if ($exist) {
+            echo 'ERROR' . PHP_EOL;
+        } else {
+            $accounts[] = $user;
+            file_put_contents('../private/passwd', serialize($accounts));
+            echo 'OK' . PHP_EOL;
+        }
+    } else {
+        echo 'ERROR ------' . PHP_EOL;
     }
