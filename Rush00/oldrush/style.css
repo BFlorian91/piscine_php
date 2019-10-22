@@ -1,0 +1,86 @@
+body {
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/houndstooth-pattern.png");
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/vintage-concrete.png");
+    width: 90%;
+    max-width: 400px;;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    color: solid black;
+    border-radius: 10px;
+}
+
+.tableau {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .tableau td, .tableau th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .tableau tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .tableau tr:hover {background-color: #ddd;}
+  
+  .tableau th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  /* Barre de navigation */
+
+  .navigation {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navigation a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* CSS de l'Accueil */
+
+#accueil_central {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* CSS du panier */
