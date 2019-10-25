@@ -1,6 +1,6 @@
 <?php
 
-    class lannister
+    class Lannister
     {
         public function sleepWith($name)
         {
