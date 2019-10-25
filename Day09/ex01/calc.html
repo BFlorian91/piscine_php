@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="#" name="form">
+        <input type="text" name="nb1">
+        <select name="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" name="nb2">
+        <input type="submit" name="submit" value="Try me!">
+    </form>
+    <script type="text/javascript">
+        let form = document.forms['form'];
+
+        setInterval(() => {
+            alert('Please use me...');
+        }, 30000);
+
+        form.onsubmit = () => {
+            let res = 0;
+            let nb1 = parseInt(form['nb1'].value);
+            let nb2 = parseInt(form['nb2'].value);
+            let op = form['op'].value;
+            if (nb1 < 0 || nb2 < 0 || isNaN(nb1) || isNaN(nb2)) {
+                alert('Error :(');
+                return false;
+            }
+            if ((op == '%' || op == '/') && (nb2 == 0 || nb1 == 0)) {
+                alert('It\'s over 9000!');
+                return false;
+            }
+            res = eval(nb1 + op + nb2);
+            alert(res);
+            return false;
+        }
+    </script>
+    
+</body>
+</html>
