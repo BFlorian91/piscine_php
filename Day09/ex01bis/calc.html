@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<form name="form">
+		<input name="nb_one" type="text">
+		<select name="op">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input name="nb_two" type="text">
+		<input type="submit" value="Try me!">
+	</form>
+	<script>
+
+		$(document).ready(function() {
+
+			setInterval(function() {
+   			alert('Please use me...');
+			}, 30000);
+			var form = $('form[name="form"]');
+			form.submit(function () {
+				var nb1 = parseInt($('input[name="nb_one"]').val());
+				var nb2 = parseInt($('input[name="nb_two"]').val());
+				var op = $('select[name="op"]').val();
+				if (nb1 < 0 || nb2 < 0 || !($.isNumeric(nb1)) || !($.isNumeric(nb2))) {
+					alert('Error :(');
+					return false;
+				}
+				if ((op == '%' || op == '/') && nb2 == 0) {
+					res = 'It\'s over 9000!';
+					alert(res);
+					console.log(res);
+					return false;
+				}
+				if (op == '%')
+					res = nb1 % nb2;
+				else if (op == '+')
+					res = nb1 + nb2;
+				else if (op == '-')
+					res = nb1 - nb2;
+				else if (op == '/')
+					res = nb1 / nb2;
+				else if (op == '*')
+					res = nb1 * nb2;
+				else {
+					alert('Error :(');
+					return false;
+				}
+				alert(res);
+				console.log(res);
+				return false;
+			});
+		});
+
+	</script>
+</body>
+</html>

@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Balloon</title>
-    <style>
-        #circle {
-            background-color: red;
-            width: 200px;
-            height: 200px;
-            border-radius: 100%;
-        }
-    </style>
+	<meta charset="utf-8">
+	<title>Balloon</title>
+	<style>
+		#circle {
+			background-color: red;
+			width: 200px;
+			height: 200px;
+			border-radius:100%;
+		}
+	</style>
 </head>
 <body>
-    <div id="circle"></div>
-    <script type="text/javascript">
-        document.getElementById('circle').onclick = () => {
-            let circle = document.getElementById('circle');
-            let color = circle.style.backgroundColor;
-            let width = circle.clientWidth;
-            let height = circle.clientHeight;
-            circle.style.width = width + 10 + 'px';
-            circle.style.height = height + 10 + 'px';
-            if (width + 10 > 420) {
-                circle.style.width = '200px';
-                circle.style.height = '200px';
-            }
-            if (color == 'red')
-                circle.style.backgroundColor = 'green';
-            else if (color == 'green')
-                circle.style.backgroundColor = 'blue';
-            else if (color == 'blue')
-                circle.style.backgroundColor = 'red';
-            else {
-                circle.style.backgroundColor = 'green';
-            }
-        }
+	<div id="circle"></div>
+	<script type="text/javascript">
+		document.getElementById('circle').onclick = function () {
+			var circle = document.getElementById('circle');
+			var color = circle.style.backgroundColor;
+			var width = circle.clientWidth;
+			var height = circle.clientHeight;
+			circle.style.height = height + 10 + 'px';
+			circle.style.width = width + 10 + 'px';
+			if (width + 10 > 420) {
+				circle.style.height = '200px';
+				circle.style.width = '200px';
+			}
+			if (color == 'red')
+				circle.style.backgroundColor = 'green';
+			else if (color == 'green')
+				circle.style.backgroundColor = 'blue';
+			else if (color == 'blue')
+				circle.style.backgroundColor = 'red';
+			else {
+				circle.style.backgroundColor = 'green';
+			}
+		}
 
-        document.getElementById('circle').onmouseleave = () => {
-            let circle = document.getElementById('circle');
-            let color = circle.style.backgroundColor;
-            let width = circle.clientWidth;
-            let height = circle.clientHeight;
-            if (width >= 210) {
-                circle.style.width = width - 5 + 'px';
-                circle.style.height = height - 5 + 'px';
-            }
-
-            if (color == 'red')
-                circle.style.backgroundColor = 'blue';
-            else if (color == 'green')
-                circle.style.backgroundColor = 'red';
-            else if (color == 'blue')
-                circle.style.backgroundColor = 'green';
-            else
-                circle.style.backgroundColor = 'blue';
-        }
-    </script> 
+		document.getElementById('circle').onmouseleave = function () {
+			var circle = document.getElementById('circle');
+			var color = circle.style.backgroundColor;
+			var width = circle.clientWidth;
+			var height = circle.clientHeight;
+			if (width > 200) {
+				circle.style.height = height - 5 + 'px';
+				circle.style.width = width - 5 + 'px';
+			}
+			if (color == 'red')
+				circle.style.backgroundColor = 'blue';
+			else if (color == 'green')
+				circle.style.backgroundColor = 'red';
+			else if (color == 'blue')
+				circle.style.backgroundColor = 'green';
+			else
+				circle.style.backgroundColor = 'blue';
+		}
+	</script>
 </body>
 </html>
